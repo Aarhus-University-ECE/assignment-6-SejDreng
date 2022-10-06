@@ -3,8 +3,14 @@
 
 int max(int* numbers, int size)
 {
-    // Excercise 2
-    // Implement your code below...
+    assert(size > 0);
+    int temp = 0;
+    for(int i = 0; i < size; i++)
+    {
+        if (numbers[i] > temp)
+            temp = numbers[i];
+    }
+    printf("%d", temp);
 
     return -1;
 }
