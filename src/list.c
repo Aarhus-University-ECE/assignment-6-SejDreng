@@ -35,7 +35,7 @@ int size(node *l){
     printf("%d", t);
 
 
-    return -1;
+    return t;
 }
 
 void printout(node *l) {

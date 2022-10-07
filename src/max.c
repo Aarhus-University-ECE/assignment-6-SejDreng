@@ -12,5 +12,5 @@ int max(int* numbers, int size)
     }
     printf("%d", temp);
 
-    return -1;
+    return temp;
 }
