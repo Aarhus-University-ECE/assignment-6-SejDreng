@@ -45,14 +45,10 @@ void printout(node *l) {
     node *p = l->next;
     node *head = l;
     while (p!=NULL){
-      if(p->data == head->data){
-        continue;
-      }
-      else{
         printf("%d, ",p->data);
         p = p->next;
       }
-    }
+    
     printf("%d, ",p->data); // Printing p -> data, when p -> next == NULL.
     printf("\n"); 
 }
@@ -63,23 +59,15 @@ int largest(node *l){
       post: returns the largest value of the list*/
     node *p = l->next;
     node *head = l;
-    int temp = 0;
+    int temp = p->data;
     while (p!=NULL){
-      if(p->data == head->data){
-        continue;
-      }
-      else{
         if (p->data > temp){
           temp = p->data;
         }
         p = p->next;
-      }
     }
-    if (p->data > temp){
-          temp = p->data;
-        }
     printf("%d, ",temp); // Printing p -> data, when p -> next == NULL.
     printf("\n"); 
-    return -1; 
+    return temp; 
 }
 
